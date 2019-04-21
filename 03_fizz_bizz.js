@@ -7,7 +7,21 @@
 // 會回傳 [1, 2, Fizz, 4, Buzz]
 
 function fizzBuzz(input) {
-  // 把你的解答寫在這裡。要記得 return 喔。
+  
+  let outputArray = [];
+  for (let i = 0; i < input; i++) {
+    if ((i + 1) % 15 === 0) {
+      outputArray[i] = 'FizzBuzz';
+    } else if ((i + 1) % 3 === 0) {
+      outputArray[i] = 'Fizz';
+    } else if ((i + 1) % 5 === 0) {
+      outputArray[i] = 'Buzz';
+    } else {
+      outputArray[i] = i + 1;
+    }
+  }
+  let output = outputArray.join(' ');
+  return output;
 }
 
 module.exports = {fizzBuzz};
